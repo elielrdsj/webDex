@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<!--------- Header --------->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPokedex - Let's Catch'em All!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<!------------ Body ------------>
+<body>
+    <main>
+    <section class="header">
+    <nav>
+
+        <a href="index.html"><img src="images\logo.png" class="responsive"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="aboutus.html" class="btn">SOBRE NÓS</a></li>
+                <li><a href="howto.html" class="btn">COMO UTILIZAR</a></li>
+                <li><a href="blog.html" class="btn">BLOG</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="openMenu()"></i>
+
+    </nav>
+    <div class="text-box">
+        <h1>WebDex - O seu portal de Poke-Informações online</h1>
+        <p>Página criada como projeto final da disciplina de Front-End Estático da turma 853 da Let's Code com apoio da </p>
+        <a href="https://pokeapi.co" class="btn">Poke API</a>
+    </div>
+</section>
+<section class="contact">
+    <form action="https://formsubmit.co/elielrdsj6@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Seu Nome" class="form-control form-control-lg" required>
+        <br>
+        <input type="email" name="email" placeholder="Seu e-mail" class="form-control form-control-lg" required>
+        <br>
+        <input type="text" name="subject" placeholder="Sua mensagem" required>
+        <br>
+        <button type="submit" class="btn-footer">Send</button>
+   </form>
+</section>
+    </main>
+</body>
+<footer>
+    <div class="footer-links">
+        <ul>
+            <li><a href="contactform.html" class="btn-footer">CONTATO</a></li>
+            <li><a href="https://github.com/elielrdsj/webDex" class="btn-footer">CÓDIGO FONTE</a></li>
+        </ul>
+    </div>
+</footer>
+</html>

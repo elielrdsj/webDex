@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<!--------- Header --------->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPokedex - Let's Catch'em All!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<!------------ Body ------------>
+<body>
+    <section class="header">
+    <nav>
+
+        <a href="index.html"><img src="images\logo.png" class="responsive"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="aboutus.html" class="btn">SOBRE NÓS</a></li>
+                <li><a href="howto.html" class="btn">COMO UTILIZAR</a></li>
+                <li><a href="blog.html" class="btn">BLOG</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="openMenu()"></i>
+
+    </nav>
+    <div class="text-box">
+        <h1>WebDex - O seu portal de Poke-Informações online</h1>
+        <p>Página criada como projeto final da disciplina de Front-End Estático da turma 853 da Let's Code com apoio da </p>
+        <a href="https://pokeapi.co" class="btn">Poke API</a>
+    </div>
+</section>
+
+<!---------- Trecho das funcionalidades ---------->
+<main>
+<section class="functionality">
+    <h1>Funcionalidades Que Oferecemos</h1>
+    <p>Aqui você pode aprender um pouco mais sobre todas as funcionalidades que este WebApp oferece gratuitamente!</p>
+    <div class="row">
+        <div class="functionality-col">
+            <h3>Listagem por ordem de ID</h3>
+            <p>Lista em forma de tabela com algumas poucas informações sobre cada pokemon, ordenado por ID.</p>
+        </div>
+        <div class="functionality-col">
+            <h3>Busca por nome, tipo ou ID</h3>
+            <p>Uma ferramenta simplificada de busca pelos seus Pokemons favoritos sem complicação, busque pelo nome 
+                (completo ou imcompleto), ID ou tipo e encontre uma lista com algumas informações sobre os Pokemons encontrados.</p>
+        </div>
+    </div>
+</section>
+
+<section class="options">
+    <div class="container">
+        <h1>Inicie agora mesmo!</h1>
+        <ul id="pokedex"></ul>
+        <form>
+            <select name="Página" id="page" onchange="options[selectedIndex].value&&self.location.reload(true)">
+                <option value="" selected="selected">Página</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </form>
+    </div>
+</section>
+<!------ Pequeno Script pra abrir e fechar menu no celular ------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function openMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+<script src="app.js"></script>
+</main>
+</body>
+<footer>
+    <div class="footer-links">
+        <ul>
+            <li><a href="contactform.html" class="btn-footer">CONTATO</a></li>
+            <li><a href="https://github.com/elielrdsj/webDex" class="btn-footer">CÓDIGO FONTE</a></li>
+        </ul>
+    </div>
+</footer>
+</html>
